@@ -207,5 +207,6 @@ namespace Converter
             return int.TryParse(line, out number); 
         }
         #endregion        
+
     }
 }
