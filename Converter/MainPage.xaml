@@ -13,19 +13,22 @@
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="0.041"/>
             </TextBlock.RenderTransform>
-        	<Run Text="EZ "/>
-        	<Run/>
-        	<LineBreak/>
-        	<Run Text="converter"/>
+    		<Run Text="EZ "/>
+    		<Run/>
+    		<LineBreak/>
+    		<Run Text="base converter"/>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="510,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
         	<Run FontSize="24" Text="Binary:"/>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="500,328,0,0" TextWrapping="Wrap" Text="Decimal: " VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hexadecimal:" VerticalAlignment="Top" FontSize="24" Width="164" Margin="454,380,0,0"/>
-        <TextBox Name="binaryTxtBox" HorizontalAlignment="Left" Margin="618,271,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="binaryTxtBox_TextChanged_1"/>
-        <TextBox Name="decimalTxtBox" HorizontalAlignment="Left" Margin="618,325,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="decimalTxtBox_TextChanged_1"/>
-        <TextBox Name="hexTxtBox" HorizontalAlignment="Left" Margin="618,380,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="hexTxtBox_TextChanged_1"/>
+        <TextBox Name="binaryTxtBox" HorizontalAlignment="Left" Margin="618,271,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="binaryTxtBox_TextChanged_1" GotFocus="binaryTxtBox_GotFocus_1"/>
+        <TextBox Name="decimalTxtBox" HorizontalAlignment="Left" Margin="618,325,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="decimalTxtBox_TextChanged_1" GotFocus="decimalTxtBox_GotFocus_1"/>
+        <TextBox Name="hexTxtBox" HorizontalAlignment="Left" Margin="618,380,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="hexTxtBox_TextChanged_1" GotFocus="hexTxtBox_GotFocus_1"/>
+        <Button Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="618,436,0,0" VerticalAlignment="Top" Width="354" Click="clearButton_Click_1"/>
+        <TextBlock Name="TestTxtBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="1000,344,0,0"/>
+
 
     </Grid>
 </Page>
