@@ -26,12 +26,15 @@ namespace Converter
         string binaryLine;
         string decLine;
         string hexLine;
+        string octalLine; 
         #endregion
 
+        #region Page constructor 
         public MainPage()
         {
             this.InitializeComponent();
         }
+        #endregion 
 
         #region On Navigated To
         /// <summary>
@@ -50,6 +53,7 @@ namespace Converter
             int decValue;
             string hexValue;
             string binaryValue;
+            string octalValue; 
             switch (focusedTxtBox)
             {
                 case "binary":
@@ -57,8 +61,10 @@ namespace Converter
                     {
                         decValue = Convert.ToInt32(binaryLine, 2);
                         hexValue = decValue.ToString("X");
+                        octalValue = Convert.ToString(decValue, 8); 
                         hexTxtBox.Text = hexValue;
                         decimalTxtBox.Text = decValue.ToString();
+                        octalTxtBox.Text = octalValue; 
                     }
                     else
                     {
@@ -73,12 +79,15 @@ namespace Converter
                         binaryValue = Convert.ToString(decValue, 2);
                         hexValue = decValue.ToString("X");
                         hexTxtBox.Text = hexValue;
+                        octalValue = Convert.ToString(decValue, 8); 
                         binaryTxtBox.Text = binaryValue;
+                        octalTxtBox.Text = octalValue; 
                     }
                     else
                     {
                         hexTxtBox.Text = "";
                         binaryTxtBox.Text = "";
+                        octalTxtBox.Text = ""; 
                     }
                     break;
                 case "hex":
@@ -86,15 +95,37 @@ namespace Converter
                     {
                         decValue = int.Parse(hexLine, System.Globalization.NumberStyles.HexNumber);
                         binaryValue = Convert.ToString(decValue, 2);
+                        octalValue = Convert.ToString(decValue, 8); 
                         binaryTxtBox.Text = binaryValue;
                         decimalTxtBox.Text = decValue.ToString();
+                        octalTxtBox.Text = octalValue; 
                     }
                     else
                     {
                         binaryTxtBox.Text = "";
                         decimalTxtBox.Text = "";
+                        octalTxtBox.Text = ""; 
                     }
                     break;
+                case "octal":
+                    if (octalLine != "")
+                    {
+                        decValue = Convert.ToInt32(octalLine, 8);
+                        hexValue = decValue.ToString("X");
+                        octalValue = Convert.ToString(octalLine);
+                        decimalTxtBox.Text = decValue.ToString(); 
+                        binaryValue = Convert.ToString(decValue, 2);
+                        binaryTxtBox.Text = binaryValue.ToString();
+                        hexTxtBox.Text = hexValue.ToString(); 
+                    }
+                    else
+                    {
+                        binaryTxtBox.Text = "";
+                        decimalTxtBox.Text = "";
+                        hexTxtBox.Text = "";
+                        octalTxtBox.Text = ""; 
+                    }
+                    break; 
                 default: break;
             }
         }
@@ -150,6 +181,22 @@ namespace Converter
         }
         #endregion
 
+        #region octalTxtBox_TextChanged_1 
+        private void octalTxtBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            octalLine = octalTxtBox.Text;
+          if (OnlyOctalValues(octalLine) || octalLine == "")
+                textChanged();
+            else
+            {
+                octalLine = octalLine.Remove(octalLine.Length - 1, 1);
+                octalTxtBox.Text = octalLine;
+                octalTxtBox.Select(octalLine.Length, 0); 
+                
+            }
+        }
+        #endregion 
+
         #region txtBox GotFocus events - change value of focusedTxtBox
         private void binaryTxtBox_GotFocus_1(object sender, RoutedEventArgs e)
         {
@@ -168,6 +215,11 @@ namespace Converter
             focusedTxtBox = "hex";
             //textChanged(); 
         }
+
+        private void octalTxtBox_GotFocus_1(object sender, RoutedEventArgs e)
+        {
+            focusedTxtBox = "octal";
+        }
         #endregion
 
         #region Clear button click
@@ -181,6 +233,9 @@ namespace Converter
 
             hexLine = "";
             hexTxtBox.Text = "";
+
+            octalLine = "";
+            octalTxtBox.Text = ""; 
         }
         #endregion
 
@@ -204,6 +259,24 @@ namespace Converter
         {
             int number;
             return int.TryParse(line, out number);
+        }
+
+        public bool OnlyOctalValues(string line)
+        {
+            /* Wish I could have figured out Regular expressions here... Don't judge me! */
+            foreach (var c in line)
+            {
+                if (c != '0' && c != '1' &&
+                    c != '2' && c != '3' &&
+                    c != '4' && c != '5' &&
+                    c != '6' && c != '7')
+ 
+                    return false;
+
+                
+            }
+
+            return true; 
         }
         #endregion  
 
@@ -229,5 +302,9 @@ namespace Converter
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        
+
+        
     }
 }

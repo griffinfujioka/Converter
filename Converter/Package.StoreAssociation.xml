@@ -355,6 +355,15 @@
       <ReservedName>EZ Base Converter</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames />
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/d9ecd08e-1185-425c-b9dc-87136a6f09de" />
+  <AccountPackageIdentityNames>
+    <MainPackageIdentityName>36726GriffinFujioka.BlueSoD</MainPackageIdentityName>
+    <MainPackageIdentityName>36726GriffinFujioka.ChristmasCountdownad-supported</MainPackageIdentityName>
+    <MainPackageIdentityName>36726GriffinFujioka.ChristmasCountdownFree</MainPackageIdentityName>
+  </AccountPackageIdentityNames>
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/d9ecd08e-1185-425c-b9dc-87136a6f09de">
+    <PackageInfo>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.4</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>
