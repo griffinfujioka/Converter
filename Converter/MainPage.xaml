@@ -35,41 +35,11 @@
             <VisualStateGroup x:Name="ApplicationViewStates">
                 <VisualState x:Name="FullScreenLandscape">
                     <Storyboard>
-                        <DoubleAnimation Duration="0" To="24" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>-408,-93,408,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Int32>0</x:Int32>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <HorizontalAlignment>Right</HorizontalAlignment>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True"/>
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="Filled">
                     <Storyboard>
-                        <DoubleAnimation Duration="0" To="24" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>601,515,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
+                        
                     </Storyboard>
                 </VisualState>
 
@@ -81,226 +51,65 @@
                 <!-- The back button and title have different styles when snapped -->
                 <VisualState x:Name="Snapped">
                     <Storyboard>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="TestTxtBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>112</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="titleTextBlock" Storyboard.TargetProperty="FontSize">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="24"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="TestTxtBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>540,308,-456,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="binaryTxtBlock" Storyboard.TargetProperty="FontSize">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="16"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="TestTxtBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>236</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="binaryTxtBlock" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="62"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>81</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="binaryTxtBox" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="190"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,153,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="decimalTxtBlock" Storyboard.TargetProperty="FontSize">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="16"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock1">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>315.258</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="decimalTxtBlock" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="62"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="textBlock1">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>102.183</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="decimalTxtBox" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="190"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock1">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>1.5,12.649,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="hexTxtBlock" Storyboard.TargetProperty="FontSize">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="16"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock1" d:IsOptimized="True" To="36"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="binaryTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>219</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="hexTxtBlock" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="62"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="binaryTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>91,150,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="hexTxtBox" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="190"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="binaryTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>32</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="hexTxtBlock" Storyboard.TargetProperty="Text">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Hex: "/>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock" d:IsOptimized="True" To="16"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="textBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>32</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="octalTxtBlock" Storyboard.TargetProperty="FontSize">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="16"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="textBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <HorizontalAlignment>Left</HorizontalAlignment>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="octalTxtBlock" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="62"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="textBlock">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <VerticalAlignment>Top</VerticalAlignment>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="octalTxtBox" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="190"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="decimalTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>91,197,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="clearButton" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="250"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="decimalTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>219</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock2">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>81</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="textBlock2">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>32</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock2">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,197,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="textBlock2" d:IsOptimized="True" To="1"/>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock2" d:IsOptimized="True" To="16"/>
-                        <PointAnimation Duration="0" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="textBlock2" d:IsOptimized="True" To="0.743,0.426"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock3">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>62</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock3">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,244,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock3" d:IsOptimized="True" To="16"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock3">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Hex:"/>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="hexTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>91,244,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="hexTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>219</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="clearButton">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>41</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="clearButton">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>91,340,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="clearButton">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>219</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>60,535,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="octalTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>91,291,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="octalTxtBox">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>219</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock4">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,291,0,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" To="16" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock4" d:IsOptimized="True"/>
                     </Storyboard>
                 </VisualState>
             </VisualStateGroup>
@@ -308,59 +117,50 @@
 
 
         <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Grid.Row="1">
-            <TextBlock x:Name="TestTxtBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="1000,344,0,0"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="432,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
-        	<Run Text="Binary:"/>
-            </TextBlock>
-            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="422,328,0,0" TextWrapping="Wrap" Text="Decimal: " VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.5,0.5">
-                <TextBlock.RenderTransform>
-                    <CompositeTransform/>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hexadecimal:" VerticalAlignment="Top" FontSize="24" Width="164" Margin="376,380,0,0"/>
-            <TextBox x:Name="binaryTxtBox" HorizontalAlignment="Left" Margin="540,271,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="binaryTxtBox_TextChanged_1" GotFocus="binaryTxtBox_GotFocus_1"/>
-            <TextBox x:Name="decimalTxtBox" HorizontalAlignment="Left" Margin="540,325,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="decimalTxtBox_TextChanged_1" GotFocus="decimalTxtBox_GotFocus_1"/>
-            <TextBox x:Name="hexTxtBox" HorizontalAlignment="Left" Margin="540,380,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="hexTxtBox_TextChanged_1" GotFocus="hexTxtBox_GotFocus_1"/>
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="407.451,30.642,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Height="154.716" Width="548.098" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextAlignment="Center">
-                <TextBlock.RenderTransform>
-                    <CompositeTransform Rotation="0.041"/>
-                </TextBlock.RenderTransform>
-        	<Run Text="EZ "/>
-        	<Run/>
-        	<LineBreak/>
-        	<Run Text="base converter"/>
-            </TextBlock>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="titleTextBlock" HorizontalAlignment="Center" Text="EZ Base Converter" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" FontSize="72" TextAlignment="Center" Margin="0,0,0,30"/>
 
-            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="449,436,0,0" TextWrapping="Wrap" Text="Octal: " VerticalAlignment="Top" FontSize="24" Height="33" RenderTransformOrigin="1.344,0.061" Width="63"/>
-            <TextBox x:Name="octalTxtBox" HorizontalAlignment="Left" Margin="540,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" GotFocus="octalTxtBox_GotFocus_1" TextChanged="octalTxtBox_TextChanged_1" RenderTransformOrigin="-1.211,-0.125" Width="354"/>
-            <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="540,481,0,0" VerticalAlignment="Top" Width="354" Click="clearButton_Click_1"/>
-            <Canvas Margin="590,529,526,37">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="binaryTxtBlock" Text="Binary: " FontSize="24" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="binaryTxtBox" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="binaryTxtBox_TextChanged_1" GotFocus="binaryTxtBox_GotFocus_1"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="decimalTxtBlock" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" Text="Decimal: " VerticalAlignment="Top" FontSize="24" Width="160"/>
+                    <TextBox x:Name="decimalTxtBox" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="NoWrap" VerticalAlignment="Top" Width="354" TextChanged="decimalTxtBox_TextChanged_1" GotFocus="decimalTxtBox_GotFocus_1"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="hexTxtBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Hexadecimal:" VerticalAlignment="Top" FontSize="24" Width="160" Margin="10,10,10,10"/>
+                    <TextBox x:Name="hexTxtBox" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="NoWrap" VerticalAlignment="Top" Width="350" TextChanged="hexTxtBox_TextChanged_1" GotFocus="hexTxtBox_GotFocus_1"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="octalTxtBlock" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" Text="Octal: " VerticalAlignment="Top" FontSize="24" Width="160"/>
+                    <TextBox x:Name="octalTxtBox" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" VerticalAlignment="Top" GotFocus="octalTxtBox_GotFocus_1" TextChanged="octalTxtBox_TextChanged_1" RenderTransformOrigin="-1.211,-0.125" Width="354"/>
+                </StackPanel>
 
 
-
-
-
-            </Canvas>
-            <Grid Margin="590,529,526,37">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="29*"/>
-                    <RowDefinition Height="33*"/>
-                </Grid.RowDefinitions>
-                <UI:AdControl x:Name="adControl" HorizontalAlignment="Left" Height="62" Margin="0" VerticalAlignment="Top" Width="250" Opacity="1" ApplicationId="a91068c6-9258-47df-b129-f5117d4106c7" AdUnitId="102206"/>
-
-
-
-
-
-
-            </Grid>
-
+                <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Center" Margin="10,10,10,10" VerticalAlignment="Top" Width="510" Click="clearButton_Click_1"/>
+            </StackPanel>
+            
 
 
 
 
 
         </Grid>
+        <UI:AdControl
+                    x:Name="adControl" 
+                    HorizontalAlignment="Center" 
+                    Height="60" 
+                    Margin="0,0,0,0" 
+                    Grid.Row="0"
+                    Opacity="1"
+                    VerticalAlignment="Center" 
+                    Width="292" 
+                     ApplicationId="a91068c6-9258-47df-b129-f5117d4106c7" AdUnitId="102206" 
+                     />
 
     </Grid>
 </common:LayoutAwarePage>
