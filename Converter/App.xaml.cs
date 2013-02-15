@@ -13,6 +13,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ApplicationSettings;
+using Windows.UI;
+using Callisto.Controls;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -61,6 +64,9 @@ namespace Converter
                 throw new Exception("Failed to create initial page");
             }
 
+            // Settings
+            SettingsPane.GetForCurrentView().CommandsRequested += Settings_CommandsRequested;
+
             // Place the frame in the current Window and ensure that it is active
             Window.Current.Content = rootFrame;
             Window.Current.Activate();
@@ -78,6 +84,42 @@ namespace Converter
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// Define Settings Pages for the application once the OnCommandsRequested event is raised.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        void Settings_CommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {
+            Color _background = Color.FromArgb(255, 178, 34, 34);
+
+            // Add an About command
+            var About = new SettingsCommand("About", "About", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.Content = new AboutPage();
+                settings.HeaderBrush = new SolidColorBrush(_background);
+                settings.Background = new SolidColorBrush(_background);
+                settings.HeaderText = "About";
+                settings.IsOpen = true;
+            });
+
+            var PrivacyPolicy = new SettingsCommand("PrivacyPolicy", "Privacy Policy", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.Content = new PrivacyPolicy();
+                settings.HeaderBrush = new SolidColorBrush(_background);
+                settings.Background = new SolidColorBrush(_background);
+                settings.HeaderText = "Privacy Policy";
+                settings.IsOpen = true;
+            });
+
+
+
+            args.Request.ApplicationCommands.Add(About);
+            args.Request.ApplicationCommands.Add(PrivacyPolicy);
         }
     }
 }
