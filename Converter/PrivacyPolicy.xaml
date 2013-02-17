@@ -12,7 +12,7 @@
     <Grid Background="White">
         <StackPanel>
             <TextBlock FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="16" TextWrapping="Wrap" Margin="10,10,10,10" Foreground="Black"
-                       Text="EZ Base Converter does not access any of your information. Internet capability is required to power the ad, which ultimately feeds a college student."/>
+                       Text="EZ Base Converter does not use, transmit, store or disclose any personal information. Internet capability is required to power the ad, which ultimately feeds a college student."/>
         </StackPanel>
     </Grid>
 </UserControl>
